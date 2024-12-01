@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara5304-nexttt-js-deployment
+  labels:
+    app: tan-dara5304-nexttt-js
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara5304-nexttt-js
+  template:
+    metadata:
+      labels:
+        app: tan-dara5304-nexttt-js
+    spec:
+      containers:
+        - name: tan-dara5304-nexttt-js-container
+          image: pipejet/tan-dara5304-nexttt-js:latest
+          ports:
+            - containerPort: 3000
