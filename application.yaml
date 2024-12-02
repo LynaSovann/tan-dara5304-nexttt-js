@@ -3,6 +3,13 @@ kind: Application
 metadata:
   name: tan-dara5304-nexttt-js
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.telegram: "-1002195638358"
+    notifications.argoproj.io/subscribe.on-sync-failed.telegram: "-1002195638358"
+    notifications.argoproj.io/subscribe.on-deleted.telegram: "-1002195638358"
+    notifications.argoproj.io/subscribe.on-sync-succeeded.updateDeploymentStatusWebhook: ""
+    notifications.argoproj.io/subscribe.on-sync-succeeded.gmail: sovannlyna2004@gmail.com
+
 spec:
   project: default
   source:
